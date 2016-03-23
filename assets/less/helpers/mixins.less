@@ -1,0 +1,320 @@
+// main: ../flinbu.less
+.font-size(@size){
+    font-size: @size;
+    font-size: unit(round((unit(@size) / 10), 3), rem);
+}
+.font-lato(@font: @font-lato){
+    font-family: @font;
+}
+.font-oswald(@font: @font-oswald){
+    font-family: @font;
+}
+.border-radius(@radius){
+    .border-top-radius(@radius);
+    .border-bottom-radius(@radius);
+}
+.transition(@property:width, @duration:0.2s, @ease:ease-out) {
+  -webkit-transition: @property @duration @ease;
+  -moz-transition: @property @duration @ease;
+  -o-transition: @property @duration @ease;
+  transition: @property @duration @ease;
+}
+.make-icon(@font-family: @font-icons) {
+    font-family: @font-family;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.social_links_colors(@base-color: @color-white) {
+    a {
+        color: @color-white;
+        border-bottom: 2px solid transparent;
+        &:hover, &:focus, &:active {
+            color: @color-white;
+        }
+    }
+    &.facebook {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-facebook;
+            }
+        }
+    }
+    &.twitter {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-twitter;
+            }
+        }
+    }
+    &.instagram {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-instagram;
+            }
+        }
+    }
+    &.flickr {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-flickr;
+            }
+        }
+    }
+    &.google-plus {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-google-plus;
+            }
+        }
+    }
+    &.linkedin {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-linkedin;
+            }
+        }
+    }
+    &.pinterest {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-pinterest;
+            }
+        }
+    }
+    &.skype {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-skype;
+            }
+        }
+    }
+    &.spotify {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-spotify;
+            }
+        }
+    }
+    &.soundcloud {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-soundcloud;
+            }
+        }
+    }
+    &.tumblr {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-tumblr;
+            }
+        }
+    }
+    &.whatsapp {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-whatsapp;
+            }
+        }
+    }
+    &.vine {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-vine;
+            }
+        }
+    }
+    &.youtube {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-youtube;
+            }
+        }
+    }
+    &.medium {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-medium;
+            }
+        }
+    }
+    &.github {
+        a {
+            color: @base-color;
+        }
+        &:hover, &:focus, &:active {
+            a {
+                border-bottom-color: @bc-github;
+            }
+        }
+    }
+}
+.hide_from_cols(@cols, @prop : left) {
+  @col_size: 100% / 12;
+  @{prop}: (@col_size * @cols) * -1;
+}
+.mrl_in_cols(@cols) {
+  @col_size: 100% / 12;
+  margin-right: (@col_size * @cols) * -1;
+  margin-left: (@col_size * @cols);
+}
+.left_in_cols(@cols) {
+  @col_size: 100% / 12;
+  left: (@col_size * @cols);
+}
+
+.text-colors() {
+  .text-yellow {
+    color: @color-yellow;
+  }
+  .text-red {
+    color: @color-red;
+  }
+  .text-brown {
+    color: @color-brown;
+  }
+  .text-lime {
+    color: @color-lime;
+  }
+  .text-green {
+    color: @color-green;
+  }
+  .text-purple {
+    color: @color-purple;
+  }
+  .text-blue {
+    color: @color-blue;
+  }
+  .text-cyan {
+    color: @color-cyan;
+  }
+  .text-salmon {
+    color: @color-salmon;
+  }
+  .text-facebook {
+    color: @color-facebook;
+  }
+  .text-twitter {
+    color: @color-twitter;
+  }
+  .text-gplus {
+    color: @color-gplus;
+  }
+  .text-pinterest {
+    color: @color-pinterest;
+  }
+  .text-whatsapp {
+    color: @color-whatsapp;
+  }
+  .text-tumblr {
+    color: @color-tumblr;
+  }
+  .text-instagram {
+    color: @color-tumblr;
+  }
+}
+.tblr(@size) {
+  top: unit(@size, px);
+  bottom: unit(@size, px);
+  left: unit(@size, px);
+  right: unit(@size, px);
+}
+.blur(@size) {
+  -webkit-filter: blur(unit(@size, px));
+  -moz-filter: blur(unit(@size, px));
+  -o-filter: blur(unit(@size, px));
+  -ms-filter: blur(unit(@size, px));
+  filter: blur(unit(@size, px));
+}
+.make-colors(@colors) {
+  .create-color-classes(@iterator: 1) when(@iterator <= length(@colors)) {
+    @color-name: e(extract(@colors, @iterator));
+    @color-var: 'color-@{color-name}';
+    &.text-@{color-name} {
+      color: @@color-var;
+    }
+    &.bg-@{color-name} {
+      background-color: @@color-var;
+      &:hover {
+        background-color: @color-white;
+      }
+    }
+    &.border-@{color-name} {
+      border-color: @@color-var;
+    }
+    .create-color-classes((@iterator + 1));
+  }
+  .create-color-classes();
+}
+.make-colored-btn(@colors) {
+  .create-color-classes(@iterator: 1) when(@iterator <= length(@colors)) {
+    @color-name: e(extract(@colors, @iterator));
+    @color-var: 'color-@{color-name}';
+    &.btn-bordered-@{color-name} {
+      .button-variant(@@color-var, @color-white, @@color-var);
+    }
+    &.btn-@{color-name} {
+      .button-variant(@color-white, @@color-var, @@color-var);
+    }
+    .create-color-classes((@iterator + 1));
+  }
+  .create-color-classes();
+}
+.flat-btn() {
+  .box-shadow(none);
+  &:hover {
+    .box-shadow(none);
+  }
+}
